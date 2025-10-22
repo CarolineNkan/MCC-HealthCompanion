@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+#  MCC — Medical Care Companion
+**Your AI-powered digital health assistant for daily wellness, hydration, and chronic care management.**  
+Built with **AWS Bedrock (Claude Sonnet 4.5)**, **Lambda**, **DynamoDB**, **S3**, and **React**.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## 🌟 Overview
+MCC (Medical Care Companion) is an **AI health assistant** designed to support people managing chronic conditions by providing:
+- Empathetic, conversational care between doctor visits  
+-  Smart reminders via Amazon SNS (e.g., “Drink water every 2 hours”)  
+-  Vital & mood tracking stored securely in DynamoDB and S3  
+-  Bedrock AI reasoning powered by **Claude Sonnet 4.5**  
+-  A serverless AWS architecture built for scalability and privacy  
 
-In the project directory, you can run:
+---
 
-### `npm start`
+##  Features
+- **Personalized AI Conversations** – Natural, doctor-like dialogue  
+- **Hydration & Medication Reminders** – Automated via AWS SNS  
+- **Secure Health Logging** – Stored safely in DynamoDB  
+- **Cloud-Native Architecture** – Fully serverless on AWS  
+- **React Frontend** – Clean chat UI with sound effects and animation  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Architecture
+**Tech Stack**
+| Layer | Service / Tool | Purpose |
+|-------|----------------|----------|
+| AI Engine | Amazon Bedrock (Claude 4.5) | Natural health dialogue |
+| Backend | AWS Lambda (Python) | Handles AI + SNS logic |
+| Database | DynamoDB | Stores user vitals & chat history |
+| Storage | Amazon S3 | Saves conversation logs |
+| API | Amazon API Gateway | Secure REST endpoint |
+| Notifications | Amazon SNS | Health reminders |
+| Frontend | React.js | Chat interface |
+| Monitoring | CloudWatch | Logs & performance |
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Inspiration
+The idea came from the gap between **clinical care** and **daily self-management**.  
+Many patients forget reminders or feel isolated while managing chronic conditions like hypertension or diabetes.  
+MCC bridges that gap — giving users a **friendly digital companion** that reminds, listens, and records their care journey.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How It Works
+1. The user types:  
+   > “MCC, remind me to take my meds at 8PM.”  
+2. API Gateway triggers a **Lambda function** → connects to **Bedrock (Claude Sonnet 4.5)**.  
+3. The AI generates a compassionate response and logs it in **DynamoDB**.  
+4. If it’s a reminder, **SNS** sends an email/SMS notification.  
+5. The **React UI** displays MCC’s warm, human-like messages in real time.  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##  Built With
+- **Frontend:** React.js, Axios, HTML, CSS  
+- **Backend:** Python (AWS Lambda), API Gateway  
+- **AI:** Amazon Bedrock — Claude Sonnet 4.5  
+- **Database:** DynamoDB  
+- **Storage:** Amazon S3  
+- **Notifications:** SNS  
+- **Monitoring:** CloudWatch  
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Setup & Run Locally
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Clone
+```bash
+git clone https://github.com/CarolineNkan/MCC-HealthCompanion.git
+cd MCC-HealthCompanion
